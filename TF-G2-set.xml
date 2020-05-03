@@ -1,33 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<PropertyList include="config/base.xml">
-
-
-  <rotors>
-    <main>
-      <rpm type="double">400</rpm>
-    </main>
-  </rotors>
-
-  <engines>
-		<engine>
-		  <rpm type="double">900</rpm>
-		</engine>
-  </engines>
-
-	<nasal>
-  	<TF-G2>
-  		<file>Aircraft/TF-G2/Nasal/liveries.nas</file>
-  	</TF-G2>
-
-  	<gyro>
-  		<file>Aircraft/TF-G2/Nasal/gyro.nas</file>
-  	</gyro>
-
-	</nasal>
-
-
+<PropertyList>
   <sim>
+
     <description>TF-G2 Autogyro (YASim)</description>
     <author>ThunderFly s.r.o.</author>
     <status>Alpha 0.1</status>
@@ -368,7 +343,33 @@
           <automatic-release-angle-deg type="float">90.0</automatic-release-angle-deg>
       </winch>
   </hitches>
+
+  <rotors>
+    <main>
+      <rpm type="double">400</rpm>
+    </main>
+  </rotors>
+
+  <engines>
+		<engine>
+		  <rpm type="double">900</rpm>
+		</engine>
+  </engines>
+
+	<nasal>
+  	<TF-G2>
+  		<file>Aircraft/TF-G2/Nasal/liveries.nas</file>
+  	</TF-G2>
+
+  	<gyro>
+  		<file>Aircraft/TF-G2/Nasal/gyro.nas</file>
+  	</gyro>
+
+	</nasal>
+
   </sim>
+
+
 
   <controls>
         <breakage>
