@@ -51,9 +51,9 @@ Range: 250 km
        maxcollective="3.5" mincollective="3.5"
        maxcyclicele="0" mincyclicele="0"
        maxcyclicail="0" mincyclicail="0"
-       diameter="2.1"
+       diameter="0.98"
        numblades="2"
-       weightperblade="1.1"
+       weightperblade="0.1"
        twist="0"
        chord="0.05"
        rpm="700"
@@ -120,16 +120,16 @@ Range: 250 km
   <propeller x="0.02" y="0" z="0.03"
       mass="0.05"
       moment="0.0006"
-      radius="0.203"
+      radius="0.113"
       cruise-speed="26"
       cruise-rpm="7000"
-      cruise-power="0.5"
+      cruise-power="0.1"
       cruise-alt="2000"
-      takeoff-power="0.70"
+      takeoff-power="0.2"
       takeoff-rpm="9200"
       contra="1">
 	    <actionpt x="0" y="0" z="0.03"/>
-    	<electric-engine Kv="750" voltage="15" Rm="0.02" >
+    	<electric-engine Kv="750" voltage="12" Rm="0.02" >
     		<control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
     	</electric-engine>
   </propeller>
