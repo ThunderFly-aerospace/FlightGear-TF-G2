@@ -45,7 +45,7 @@ Range: 250 km
   </cruise>
 
   <rotor name="main"
-       x="-0.15" y="0.0" z="0.229"
+       x="-0.17" y="0.0" z="0.229"
        nx="0" ny="0" nz="1"
        fx="1" fy="0" fz="0"  ccw="1"
        maxcollective="3.5" mincollective="3.5"
@@ -166,7 +166,7 @@ Range: 250 km
 
   <!-- two front gears -->
 
-  <gear x="-0.005" y="0.13" z="-0.1"
+  <gear x="-0.05" y="0.15" z="-0.13"
     spring="0.9"
     damp="0.8"
     dfric="0.9"
@@ -176,7 +176,7 @@ Range: 250 km
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
 
-  <gear x="-0.005" y="-0.13" z="-0.1"
+  <gear x="-0.05" y="-0.15" z="-0.13"
     spring="0.9"
     damp="0.8"
     dfric="0.9"
@@ -205,22 +205,25 @@ Range: 250 km
 <!-- fuel tank for moddeled engine-->
  <!-- <tank x="-0.1" y="0.0" z="-0.05" capacity="0.2"/> -->
 
-<!-- rotor head ballast -->
+<!-- rotor ballast -->
 <ballast  x="-0.15" y="0.0" z="0.23" mass-kg="0.1"/>
 
+<!-- body balast -->
+<ballast  x="-0.17" y="0.0" z="0.02" mass-kg="0.7"/>
 
-<!-- <ballast  x="-0.06471" y="0" z="-0.2" mass-kg="0.3"/>
-<ballast  x="-0.34368" y="0.225" z="-0.2" mass-kg="0.15"/>
-<ballast  x="-0.34368" y="-0.225" z="-0.2" mass-kg="0.15"/> -->
 
-<!-- engine balast -->
-<ballast  x="0.0" y="0.0" z="0.02" mass-kg="0.7"/>
+
+<!-- motor balast -->
+<ballast  x="0.01" y="0.01" z="0.03" mass-kg="0.18"/>
 
 <!-- accumulator balast -->
-<ballast  x="-0.15" y="0.01" z="0.0" mass-kg="0.25"/>
+<ballast  x="-0.09" y="0.01" z="0.03" mass-kg="0.15"/>
 
 <!-- tail balast -->
-<ballast  x="-0.80" y="0.0" z="0.00" mass-kg="0.26"/>
+<!-- Toto nastaveni predpoklada ocas v nejblizsi poloze -->
+<ballast  x="-0.66" y="0.0" z="-0.003" mass-kg="0.13"/>
+
+
 
 <!-- hitch -->
 <hitch name="winch" x="0.0" y="0.0" z="0.0">
