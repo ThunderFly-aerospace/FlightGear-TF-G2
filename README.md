@@ -2,19 +2,15 @@
 FlightGear model of TF-G2 autogyro
 
 
+![TF-G2 in FlightGear simulator](./docs/img/TF-G2_front_view.png)
 
-TF-G2 training autgyro for FlightGear simulator
-Release 0.1 (Beta)
-Tested on FG 2019.2
-
-Author:
-ThunderFly s.r.o.
-info@thunderfly.cz
-
-INTRODUCTION
+![TF-G2 side view](./docs/img/TF-G2_side_view.png)
 
 
-INSTALLATION
+## INTRODUCTION
+
+
+## INSTALLATION
 Extact and copy to data/Aircraft folder in FlightGear.
 
 
@@ -24,5 +20,5 @@ http://en.wikipedia.org/wiki/Autogyro
 
 VERSION
 0.1 Alpha release
-Roughly tunned flight model
+Roughly tuned flight model
 -----
