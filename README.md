@@ -1,6 +1,5 @@
 # FlightGear-TF-G2
-FlightGear model of TF-G2 autogyro
-
+FlightGear simulator model of [TF-G2 autogyro](https://github.com/ThunderFly-aerospace/TF-G2). 
 
 ![TF-G2 in FlightGear simulator](./docs/img/TF-G2_front_view.png)
 
@@ -8,6 +7,8 @@ FlightGear model of TF-G2 autogyro
 
 
 ## INTRODUCTION
+
+The model uses Yasim simulation engine. 
 
 
 ## INSTALLATION
