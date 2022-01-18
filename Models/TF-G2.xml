@@ -282,9 +282,9 @@
        <property>engines/engine[0]/rpm</property>
     <factor>0.02</factor>
       <center>
-        <x-m> -0.0288 </x-m>
+        <x-m> -0.0345 </x-m>
         <y-m> 0.0 </y-m>
-        <z-m> 0.0269 </z-m>
+        <z-m> 0.2335 </z-m>
       </center>
       <axis>
         <x>  -1 </x>
@@ -344,12 +344,12 @@
     <property>gear/gear[0]/rollspeed-ms</property>
     <factor> 30 </factor>
     <axis>
-      <x1-m> 0.0456 </x1-m>
+      <x1-m> 0.0419 </x1-m>
       <y1-m> 0.13 </y1-m>
-      <z1-m> -0.066 </z1-m>
-      <x2-m> 0.0456</x2-m>
+      <z1-m> -0.105 </z1-m>
+      <x2-m> 0.0419</x2-m>
       <y2-m> -0.13 </y2-m>
-      <z2-m> -0.066 </z2-m>
+      <z2-m> -0.105 </z2-m>
     </axis>
   </animation>
 
@@ -359,12 +359,12 @@
     <property>gear/gear[1]/rollspeed-ms</property>
     <factor> 30 </factor>
     <axis>
-      <x1-m> 0.0456 </x1-m>
+      <x1-m> 0.0419 </x1-m>
       <y1-m> 0.13 </y1-m>
-      <z1-m> -0.066 </z1-m>
-      <x2-m> 0.0456</x2-m>
+      <z1-m> -0.105 </z1-m>
+      <x2-m> 0.0419</x2-m>
       <y2-m> -0.13 </y2-m>
-      <z2-m> -0.066 </z2-m>
+      <z2-m> -0.105 </z2-m>
     </axis>
   </animation>
 
