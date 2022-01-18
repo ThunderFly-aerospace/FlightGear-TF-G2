@@ -141,24 +141,13 @@ Range: 250 km
   <!-- main tube -->
  <fuselage ax="0" ay="0" az="0" bx="-0.92" by="0" bz="0" width="0.03" taper="1" midpoint="0.6"/>
 
-
-  <!-- <hstab x="-0.7" y="0.0" z="-0.035"
-         incidence="-3"
-         taper="1"
-         length="0.15"
-         chord="0.08"
-         sweep="10"
-	      dihedral = "0">
-	<stall aoa="14" width="4" peak="1.5"/>
-  </hstab> -->
-
-  <vstab x="-0.75" y="0" z="-0.02"
+  <vstab x="-0.82" y="0" z="-0.02"
          chord="0.2"
          length="0.18"
-         taper="1"
-         sweep="13">
+         taper="0.5"
+         sweep="-10">
          <stall aoa="16" width="4" peak="1.5"/>
-         <flap0 start="0.1" end="0.9" lift="1.2" drag="0.8"/>
+         <flap0 start="0.1" end="1" lift="1.2" drag="0.8"/>
          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
