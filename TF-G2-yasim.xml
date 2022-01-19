@@ -56,7 +56,7 @@ Range: 250 km
        weightperblade="0.083"
        twist="0"
        chord="0.045"
-       rpm="700"
+       rpm="1000"
        tiltcenterx="-0.15" tiltcentery="0" tiltcenterz="0.229"
        mintiltpitch=" 2"
        maxtiltpitch="22"
@@ -137,11 +137,11 @@ Range: 250 km
 
 
  <!-- main fuselage -->
- <fuselage ax="0" ay="0" az="0" bx="-0.62" by="0" bz="0" width="0.2" taper="0" midpoint="0.25"/>
+ <fuselage ax="0.03" ay="0" az="0.02" bx="-0.62" by="0" bz="0" width="0.17" taper="0" midpoint="0.1"/>
   <!-- main tube -->
  <fuselage ax="0" ay="0" az="-0.01" bx="-0.70" by="0" bz="-0.01" width="0.03" taper="1" midpoint="0.6"/>
 
-  <vstab x="-0.82" y="0" z="-0.02"
+  <vstab x="-0.80" y="0" z="-0.02"
          chord="0.2"
          length="0.18"
          taper="0.5"
@@ -155,22 +155,22 @@ Range: 250 km
 
   <!-- two front gears -->
 
-  <gear x="-0.05" y="0.15" z="-0.13"
-    spring="0.8"
-    damp="0.8"
+  <gear x="-0.03" y="0.2" z="-0.15"
+    stiction="1"
+    spring="0.4"
     dfric="0.75"
     sfric="0.8"
-    compression="0.05">
+    compression="0.04">
         <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
 
-  <gear x="-0.05" y="-0.15" z="-0.13"
-    spring="0.8"
-    damp="0.8"
+  <gear x="-0.03" y="-0.2" z="-0.15"
+    stiction="1"
+    spring="0.4"
     dfric="0.75"
     sfric="0.8"
-    compression="0.05">
+    compression="0.04">
         <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
@@ -178,12 +178,13 @@ Range: 250 km
 
   <!-- rear gear -->
 
-  <gear x="-0.83" y="0.0" z="-0.065"
-    spring="0.8"
-    damp="0.8"
-    dfric="0.7"
-    sfric="0.8"
-    compression="0.04">
+  <gear x="-0.83" y="0.0" z="-0.1"
+    stiction="1"
+    spring="0.4"
+    dfric="0.8"
+    sfric="0.85"
+    compression="0.1"
+    initial-load="0.5">
         <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.3" dst1="0.3"/>
         <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
