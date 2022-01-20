@@ -120,16 +120,16 @@ Range: 250 km
   <propeller x="0.03" y="0" z="0.026"
       mass="0.05"
       moment="0.00006"
-      radius="0.113"
-      cruise-speed="26"
+      radius="0.14"
+      cruise-speed="15"
       cruise-rpm="7000"
       cruise-power="0.1"
       cruise-alt="2000"
       takeoff-power="0.2"
       takeoff-rpm="9200"
       contra="1">
-	    <actionpt x="0.03" y="0" z="0.026"/>
-    	<electric-engine Kv="750" voltage="12" Rm="0.02" >
+	    <actionpt x="0.03" y="0" z="0.0265"/>
+    	<electric-engine Kv="800" voltage="12" Rm="0.02" >
     		<control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
     	</electric-engine>
   </propeller>
@@ -155,20 +155,20 @@ Range: 250 km
 
   <!-- two front gears -->
 
-  <gear x="-0.03" y="0.2" z="-0.15"
+  <gear x="-0.03" y="0.2" z="-0.17"
     stiction="1"
     spring="0.4"
-    dfric="0.75"
+    dfric="0.8"
     sfric="0.8"
     compression="0.04">
         <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
 
-  <gear x="-0.03" y="-0.2" z="-0.15"
+  <gear x="-0.03" y="-0.2" z="-0.17"
     stiction="1"
     spring="0.4"
-    dfric="0.75"
+    dfric="0.8"
     sfric="0.8"
     compression="0.04">
         <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
@@ -178,12 +178,12 @@ Range: 250 km
 
   <!-- rear gear -->
 
-  <gear x="-0.83" y="0.0" z="-0.1"
+  <gear x="-0.83" y="0.0" z="-0.14"
     stiction="1"
     spring="0.4"
     dfric="0.8"
     sfric="0.85"
-    compression="0.1"
+    compression="0.05"
     initial-load="0.5">
         <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.3" dst1="0.3"/>
         <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
@@ -196,10 +196,10 @@ Range: 250 km
  <!-- <tank x="-0.1" y="0.0" z="-0.05" capacity="0.2"/> -->
 
 <!-- rotor ballast -->
-<ballast  x="-0.15" y="0.0" z="0.23" mass-kg="0.1"/>
+<ballast  x="-0.18" y="0.0" z="0.23" mass-kg="0.1"/>
 
 <!-- body balast -->
-<ballast  x="-0.13" y="0.0" z="0.02" mass-kg="0.7"/>
+<ballast  x="-0.10" y="0.0" z="0.02" mass-kg="0.7"/>
 
 
 
@@ -207,11 +207,11 @@ Range: 250 km
 <ballast  x="0.01" y="0.01" z="0.03" mass-kg="0.18"/>
 
 <!-- accumulator balast -->
-<ballast  x="-0.09" y="0.01" z="0.03" mass-kg="0.15"/>
+<ballast  x="-0.00" y="0.01" z="0.03" mass-kg="0.15"/>
 
 <!-- tail balast -->
 <!-- Toto nastaveni predpoklada ocas v nejblizsi poloze -->
-<ballast  x="-0.66" y="0.0" z="-0.003" mass-kg="0.13"/>
+<ballast  x="-0.8" y="0.0" z="-0.003" mass-kg="0.13"/>
 
 
 
