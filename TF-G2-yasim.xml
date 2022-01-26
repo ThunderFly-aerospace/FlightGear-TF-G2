@@ -53,7 +53,7 @@ Range: 250 km
        maxcyclicail="0" mincyclicail="0"
        diameter="1.02"
        numblades="2"
-       weightperblade="0.083"
+       weightperblade="0.11023"
        twist="0"
        chord="0.05"
        rpm="1000"
@@ -83,20 +83,20 @@ Range: 250 km
        number-of-parts="10"
        rel-len-where-incidence-is-measured="0.5"
        rel-len-blade-start="0.125"
-  		 airfoil-lift-coefficient="2.3"
-  		 airfoil-drag-coefficient0="0.0075"
-  		 airfoil-drag-coefficient1="0.0325"
-  		 airfoil-incidence-no-lift="-3"
-  		 incidence-stall-zero-speed="15"
-  		 incidence-stall-half-sonic-speed="14.5"
-  		 lift-factor-stall="0.6"
-  		 stall-change-over="10"
-  		 drag-factor-stall="1.5"
+       airfoil-lift-coefficient="2.3"
+       airfoil-drag-coefficient0="0.0075"
+       airfoil-drag-coefficient1="0.0325"
+       airfoil-incidence-no-lift="-3"
+       incidence-stall-zero-speed="15"
+       incidence-stall-half-sonic-speed="14.5"
+       lift-factor-stall="0.6"
+       stall-change-over="10"
+       drag-factor-stall="1.5"
        cyclic-factor="0.8"
        rotor-correction-factor="0.95"
        downwashfactor="0.0"
-       balance="1"
-	 >
+       balance="1">
+       
          <control-input axis="/controls/flight/aileron-trim" control="TILTROLL" split="true" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
          <control-input axis="/controls/flight/aileron" control="TILTROLL" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
          <control-input axis="/controls/flight/elevator-trim" control="TILTPITCH" split="true" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
@@ -157,7 +157,7 @@ Range: 250 km
 
   <gear x="-0.03" y="0.2" z="-0.17"
     stiction="1"
-    spring="0.4"
+    spring="0.39"
     dfric="0.8"
     sfric="0.8"
     compression="0.04">
@@ -167,7 +167,7 @@ Range: 250 km
 
   <gear x="-0.03" y="-0.2" z="-0.17"
     stiction="1"
-    spring="0.4"
+    spring="0.39"
     dfric="0.8"
     sfric="0.8"
     compression="0.04">

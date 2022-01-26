@@ -29,8 +29,7 @@
     <object-name>propeller</object-name>
 
     <object-name>rotorMiddle</object-name>
-    <object-name>rotorBlade1F</object-name>
-    <object-name>rotorBlade2B</object-name>
+    <object-name>rotorBlades</object-name>
 
     <object-name>rudder</object-name>
 
@@ -42,29 +41,17 @@
     <object-name>rotorPitchBase</object-name>
     <object-name>rotorYawBase</object-name>
 
-	<object-name>rotorBlade1Fblur</object-name>
-	<object-name>rotorBlade2Bblur</object-name>
-	<object-name>propellerblur</object-name>
-
   </animation>
 
 <effect>
 	<inherits-from>Effects/model-transparent</inherits-from>
 	<object-name>canopyGlass</object-name>
-	<object-name>propellerblur</object-name>
-	<object-name>rotorBlade1Fblur</object-name>
-	<object-name>rotorBlade2Bblur</object-name>
-
-	<object-name>rotorBlade1FblurHigh</object-name>
-	<object-name>rotorBlade2BblurHigh</object-name>
-	<object-name>rotorBlade1FblurHigh2</object-name>
-	<object-name>rotorBlade2BblurHigh2</object-name>
 
 </effect>
 
 <animation>
   <type>spin</type>
- <object-name>propeller</object-name>
+  <object-name>propeller</object-name>
    <condition>
        <less-than>
         <property>engines/engine[0]/rpm</property>
@@ -72,11 +59,11 @@
       </less-than>
        </condition>
  <property>engines/engine[0]/rpm</property>
-  <factor>0.05</factor>
+  <factor>1</factor>
     <center>
-      <x-m> -0.02952 </x-m>
-      <y-m> -0.00127 </y-m>
-      <z-m> 0.00125 </z-m>
+        <x-m> -0.034 </x-m>
+        <y-m> -0.00 </y-m>
+        <z-m> 0.025 </z-m>
     </center>
     <axis>
       <x>  1 </x>
@@ -87,7 +74,7 @@
 
 <animation>
   <type>spin</type>
- <object-name>propeller</object-name>
+  <object-name>propeller</object-name>
    <condition>
     <and>
       <greater-than>
@@ -103,9 +90,9 @@
      <property>engines/engine[0]/rpm</property>
   <factor>1</factor>
     <center>
-      <x-m> -0.02952 </x-m>
-      <y-m> -0.00127 </y-m>
-      <z-m> 0.00125 </z-m>
+      <x-m> -0.034 </x-m>
+      <y-m> -0.00 </y-m>
+      <z-m> 0.025 </z-m>
     </center>
     <axis>
       <x>  1 </x>
@@ -114,23 +101,38 @@
     </axis>
  </animation>
 
+
+
+   <animation>
+     <type>spin</type>
+    <object-name>propeller</object-name>
+      <condition>
+         <greater-than>
+           <property>engines/engine[0]/rpm</property>
+           <value>1600.0001</value>
+         </greater-than>
+       </condition>
+        <property>engines/engine[0]/rpm</property>
+     <factor>0.02</factor>
+       <center>
+           <x-m> -0.034 </x-m>
+           <y-m> -0.00 </y-m>
+           <z-m> 0.025 </z-m>
+       </center>
+       <axis>
+         <x>  -1 </x>
+         <y>  0 </y>
+         <z>  0 </z>
+       </axis>
+    </animation>
+
+
 <!-- Rotor and RotorHead -->
 
    <animation>
     <type>rotate</type>
     <object-name>rotorMiddle</object-name>
-    <object-name>rotorBlade1F</object-name>
-    <object-name>rotorBlade2B</object-name>
-
-	<object-name>rotorBlade1Fblur</object-name>
-	<object-name>rotorBlade2Bblur</object-name>
-
-	<object-name>rotorBlade1FLow</object-name>
-	<object-name>rotorBlade2BLow</object-name>
-	<object-name>rotorBlade1FblurHigh</object-name>
-	<object-name>rotorBlade2BblurHigh</object-name>
-	<object-name>rotorBlade1FblurHigh2</object-name>
-	<object-name>rotorBlade2BblurHigh2</object-name>
+    <object-name>rotorBlades</object-name>
 
     <object-name>rotorHead</object-name>
     <object-name>rotorPitchBase</object-name>
@@ -152,18 +154,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rotorMiddle</object-name>
-    <object-name>rotorBlade1F</object-name>
-    <object-name>rotorBlade2B</object-name>
-
-	<object-name>rotorBlade1Fblur</object-name>
-	<object-name>rotorBlade2Bblur</object-name>
-
-	<object-name>rotorBlade1FLow</object-name>
-	<object-name>rotorBlade2BLow</object-name>
-	<object-name>rotorBlade1FblurHigh</object-name>
-	<object-name>rotorBlade2BblurHigh</object-name>
-	<object-name>rotorBlade1FblurHigh2</object-name>
-	<object-name>rotorBlade2BblurHigh2</object-name>
+    <object-name>rotorBlades</object-name>
 
     <object-name>rotorHead</object-name>
     <object-name>rotorPitchBase</object-name>
@@ -185,18 +176,7 @@
  <animation>
 	<type>spin</type>
 	<object-name>rotorMiddle</object-name>
-	<object-name>rotorBlade1F</object-name>
-	<object-name>rotorBlade2B</object-name>
-
-	<object-name>rotorBlade1Fblur</object-name>
-	<object-name>rotorBlade2Bblur</object-name>
-
-	<object-name>rotorBlade1FLow</object-name>
-	<object-name>rotorBlade2BLow</object-name>
-	<object-name>rotorBlade1FblurHigh</object-name>
-	<object-name>rotorBlade2BblurHigh</object-name>
-	<object-name>rotorBlade1FblurHigh2</object-name>
-	<object-name>rotorBlade2BblurHigh2</object-name>
+	<object-name>rotorBlades</object-name>
 
 	<property>rotors/main/rpm</property>
 	<factor>1</factor>
@@ -207,122 +187,13 @@
 		<z>1</z>
 	</axis>
 	<center>
-       <x-m> 0.1476  </x-m>
+       <x-m> 0.1744  </x-m>
        <y-m> -0.0000  </y-m>
-       <z-m> 0.202 </z-m>
+       <z-m> 0.29 </z-m>
 	</center>
 </animation>
 
 
-  <animation>
-    <type>select</type>
-	<object-name>rotorBlade1FLow</object-name>
-	<object-name>rotorBlade2BLow</object-name>
-    <condition>
-      <less-than>
-        <property>rotors/main/rpm</property>
-        <value>100.001</value>
-      </less-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-	<object-name>rotorBlade1F</object-name>
-	<object-name>rotorBlade2B</object-name>
-    <object-name>rotorBlade1Fblur</object-name>
-	<object-name>rotorBlade2Bblur</object-name>
-	<condition>
-	<and>
-      <greater-than>
-        <property>rotors/main/rpm</property>
-        <value>100</value>
-      </greater-than>
-	  <less-than>
-        <property>rotors/main/rpm</property>
-        <value>250.001</value>
-      </less-than>
-    </and>
-    </condition>
-  </animation>
-
-    <animation>
-    <type>select</type>
-	<object-name>rotorBlade1FblurHigh</object-name>
-	<object-name>rotorBlade2BblurHigh</object-name>
-    <condition>
-	<and>
-      <greater-than>
-        <property>rotors/main/rpm</property>
-        <value>250</value>
-      </greater-than>
-	  <less-than>
-        <property>rotors/main/rpm</property>
-        <value>400.001</value>
-      </less-than>
-    </and>
-	</condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-	<object-name>rotorBlade1FblurHigh2</object-name>
-	<object-name>rotorBlade2BblurHigh2</object-name>
-    <condition>
-      <greater-than>
-        <property>rotors/main/rpm</property>
-        <value>400</value>
-      </greater-than>
-    </condition>
-  </animation>
-
-
-<!-- Propeller -->
-
-  <animation>
-    <type>spin</type>
-   <object-name>propeller</object-name>
-     <condition>
-        <greater-than>
-          <property>engines/engine[0]/rpm</property>
-          <value>1600.0001</value>
-        </greater-than>
-      </condition>
-       <property>engines/engine[0]/rpm</property>
-    <factor>0.02</factor>
-      <center>
-        <x-m> -0.0345 </x-m>
-        <y-m> 0.0 </y-m>
-        <z-m> 0.2335 </z-m>
-      </center>
-      <axis>
-        <x>  -1 </x>
-        <y>  0 </y>
-        <z>  0 </z>
-      </axis>
-   </animation>
-
-  <animation>
-    <type>select</type>
-	<object-name>propellerblur</object-name>
-    <condition>
-      <greater-than>
-        <property>engines/engine[0]/rpm</property>
-        <value>1500</value>
-      </greater-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>propeller</object-name>
-    <condition>
-      <less-than>
-        <property>engines/engine[0]/rpm</property>
-        <value>2500.001</value>
-      </less-than>
-    </condition>
-  </animation>
 
 
 <!-- rudder -->
@@ -398,7 +269,6 @@
     <type>noshadow</type>
 	<object-name>rotorBlade1Fblur</object-name>
 	<object-name>rotorBlade2Bblur</object-name>
-	<object-name>propellerblur</object-name>
   </animation>
 
 
