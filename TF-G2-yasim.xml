@@ -201,7 +201,8 @@ Range: 250 km
 <!-- body balast -->
 <ballast  x="-0.10" y="0.0" z="0.02" mass-kg="0.7"/>
 
-
+<!-- weight simulating launch platform -->
+<weight x="-0.15" y="0.0" z="-0.2"  mass-prop="/sim/platform/weight-kg"/>
 
 <!-- motor balast -->
 <ballast  x="0.01" y="0.01" z="0.03" mass-kg="0.18"/>
