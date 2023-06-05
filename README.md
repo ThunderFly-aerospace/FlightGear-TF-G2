@@ -2,6 +2,8 @@
 
 FlightGear simulator model of [TF-G2 autogyro](https://github.com/ThunderFly-aerospace/TF-G2).
 
+**NOTE: The model needs Next version of FG to work correcly, due to patches newly introduced to FlightGear**
+
 ![TF-G2 in FlightGear simulator](./docs/img/TF-G2_front_view.png)
 
 ![TF-G2 side view](./docs/img/TF-G2_side_view.png)
