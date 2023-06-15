@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Systems/TF-G2-base.xml">
+
+  <sim>
+
+    <description>TF-G2 Bis Autogyro (YASim)</description>
+    <author>ThunderFly s.r.o.</author>
+
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+    <minimum-fg-version>2018.2.0</minimum-fg-version>
+
+    <flight-model>yasim</flight-model>
+    <aero>Systems/TF-G2-yasim</aero>
+
+    <rating>
+      <FDM     type="int"> 2 </FDM>
+      <systems type="int"> 3 </systems>
+      <model   type="int"> 2 </model>
+      <cockpit type="int"> 3 </cockpit>
+    </rating>
+    <!--
+    <previews>
+      <preview>
+        <type>interior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/TF-G2-0.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/TF-G2-1.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/TF-G2-2.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/TF-G2-3.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/TF-G2-4.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/TF-G2-5.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/TF-G2-6.png</path>
+      </preview>
+    </previews>
+    -->
+  </sim>
+
+</PropertyList>

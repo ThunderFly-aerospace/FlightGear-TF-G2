@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <lighting>
+    <instrument-lights type="bool">false</instrument-lights>
+    <landing-lights    type="bool">false</landing-lights>
+    <beacon            type="bool">false</beacon>
+    <strobe            type="bool">false</strobe>
+    <nav-lights        type="bool">false</nav-lights>
+    <cabin-lights      type="bool">false</cabin-lights>
+    <wing-lights       type="bool">false</wing-lights>
+    <taxi-light        type="bool">false</taxi-light>
+  </lighting>
+
+  <electric>
+    <battery-switch    type="bool">false</battery-switch>
+    <avionics-switch   type="bool">false</avionics-switch>
+    <engines>
+      <engine          n="0">
+        <fuel-pump     type="bool">false</fuel-pump>
+      </engine>
+    </engines>
+  </electric>
+
+  <engines>
+    <engine>
+      <on              type="bool">false</on>
+      <magnetos>0</magnetos>
+      <mixture         archive="y"> 0.65 </mixture>
+    </engine>
+  </engines>
+
+  <fuel>
+    <tank              n="0">
+      <lock            type="bool">false</lock>
+      <position        type="double">0</position>
+    </tank>
+  </fuel>
+
+  <rotor>
+    <handstart         type="int">0</handstart>
+    <reltarget         type="float">0</reltarget>
+    <maxreltorque>1</maxreltorque>
+  </rotor>
+
+  <gear>
+    <brake-parking     type="bool">true</brake-parking>
+    <assist-1          type="bool">false</assist-1>
+  </gear>
+
+  <flight>
+    <rudder2           type="double"> 0.00 </rudder2>
+    <rudder-trim       type="double"> 0.00 </rudder-trim>
+    <aileron-trim      type="double"> 0.00 </aileron-trim>
+    <elevator-trim     type="double"> 0.00 </elevator-trim>
+  </flight>
+
+</PropertyList>

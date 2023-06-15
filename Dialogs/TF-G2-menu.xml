@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>TF-G2</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Autostart/AutoStop</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/battery-switch</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/engine/generator</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>systems/electrical/outputs/fg1000-pfd</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>systems/electrical/outputs/fg1000-mfd</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/instrument-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/nav-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/beacon</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/strobe</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/switches/starterkey-insert</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/engines/engine[0]/fuel-pump</property>
+        </binding>
+        <!-- Magnetos ON -->
+        <binding>
+          <condition>
+            <property>controls/switches/starterkey-insert</property>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/engines/engine[0]/magnetos</property>
+          <value>3</value>
+        </binding>
+        <binding>
+          <condition>
+            <property>controls/switches/starterkey-insert</property>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/engines/engine[1]/magnetos</property>
+          <value>3</value>
+        </binding>
+        <!-- Magnetos OFF -->
+        <binding>
+          <condition>
+            <not><property>controls/switches/starterkey-insert</property></not>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/engines/engine[0]/magnetos</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <condition>
+            <not><property>controls/switches/starterkey-insert</property></not>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/engines/engine[1]/magnetos</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>engines.autostart();</script>
+        </binding>
+      </item>
+      <item>
+        <label>Aerotow Settings</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>aerotow_dialog</dialog-name>
+        </binding>
+      </item>
+      <item>
+        <label>Winch Settings</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>winch_dialog</dialog-name>
+        </binding>
+      </item>
+      <item>
+        <label>Rope Breakage</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>breakage</dialog-name>
+        </binding>
+      </item>
+      <item>
+        <label>Simulation Options</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>options_dialog</dialog-name>
+        </binding>
+      </item>
+      <item>
+        <label>Ground services</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>groundservice_dialog</dialog-name>
+        </binding>
+      </item>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.open()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Select Immatriculation</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>Immatriculation</dialog-name>
+        </binding>
+      </item>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Show/hide Yokes</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/hide-yoke</property>
+        </binding>
+      </item>
+    </menu>
+  </default>
+
+</PropertyList>

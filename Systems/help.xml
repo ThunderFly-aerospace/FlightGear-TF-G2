@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>TF-G2 (Autogyro)</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>n</name>
+    <desc>accelerate rotor (by hand!)</desc>
+  </key>
+  <line>Startup Procedure</line>
+  <line>1 : Accelerate the rotor by hand ('n'-key)</line>
+  <line>4 : Release parking-brake ('B'-key)</line>
+  <line>5 : Full power</line>
+  <line>6 : Wait for the rotor to reach sufficient rpm (~300)</line>
+  <line>(The rotor accelerates faster if you pull the stick)</line>
+
+</PropertyList>

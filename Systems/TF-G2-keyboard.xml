@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <keyboard>
+
+    <key n="110">
+      <name>n</name>
+      <desc>Rotate rotor by hand</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+          setprop("/controls/rotor/handstart", 0.3);
+        </script>
+      </binding>
+    </key>
+
+  </keyboard>
+
+</PropertyList>

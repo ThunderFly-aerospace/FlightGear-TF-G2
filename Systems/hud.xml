@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path        n="1">Aircraft/TF-G2bis/Huds/hud.xml</path>
+  <visibility  n="1">true</visibility>
+  <enable3d    n="1">false</enable3d>
+  <transparent n="1">false</transparent>
+
+</PropertyList>

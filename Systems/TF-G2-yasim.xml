@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<airplane mass-kg="1.2" version="YASIM_VERSION_CURRENT" mtow-kg="1.6">
+
+  <approach speed="20" aoa="0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.60"/>
+  </approach>
+
+  <cruise speed="26" alt="0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
+  </cruise>
+
+  <rotor name="main"
+         x="0" y="0" z="0.190"
+         nx="0" ny="0" nz="1"
+         fx="1" fy="0" fz="0" ccw="1"
+         maxcollective="2.0" mincollective="2.0"
+         diameter="0.80"
+         numblades="2"
+         weightperblade="30"
+         twist="-0"
+         chord="0.2"
+         rpm="350"
+         tiltcenterx="-1.655" tiltcentery="0" tiltcenterz="0.99"
+         mintiltpitch="-7"
+         maxtiltpitch="13"
+         mintiltroll="-11"
+         maxtiltroll="11"
+         relbladecenter="0.5"
+         dynamic="1"
+         sharedflaphinge="1"
+         rellenflaphinge="0.00"
+         delta3="0"
+         delta="0.8"
+         pitch-a="10"
+         pitch-b="15"
+         flapmin="-10"
+         flapmax="10"
+         flap0="-1.5"
+         flap0factor="0"
+         notorque="0"
+         dragfactor="0.30"
+         translift-ve="20"
+         translift-maxfactor="1.3"
+         ground-effect-constant="0.1"
+         taper="1"
+         number-of-segments="8"
+         number-of-parts="8"
+         rel-len-where-incidence-is-measured="0.7"
+         rel-len-blade-start="0.13"
+         airfoil-lift-coefficient="5.7"
+         airfoil-drag-coefficient0="0.01"
+         airfoil-drag-coefficient1="0.028"
+         airfoil-incidence-no-lift="-1,5"
+         incidence-stall-zero-speed="8"
+         incidence-stall-half-sonic-speed="7"
+         lift-factor-stall="0.2"
+         stall-change-over="10"
+         drag-factor-stall="8.0"
+         cyclic-factor="0.8"
+         rotor-correction-factor="0.5"
+         balance="0.99985">
+         <control-input control="TILTROLL"  axis="/controls/flight/aileron-trim"  src0="-1" src1="1" dst0="1" dst1="-1" split="true"/>
+         <control-input control="TILTROLL"  axis="/controls/flight/aileron"       src0="-1" src1="1" dst0="1" dst1="-1"/>
+         <control-input control="TILTPITCH" axis="/controls/flight/elevator-trim" src0="-1" src1="1" dst0="1" dst1="-1" split="true"/>
+         <control-input control="TILTPITCH" axis="/controls/flight/elevator"      src0="-1" src1="1" dst0="1" dst1="-1"/>
+  </rotor>
+
+  <rotorgear max-power-engine="0.750"
+             max-power-rotor-brake="0.050"
+             rotorgear-friction="0.0005"
+             engine-prop-factor="0.02"
+             engine-accel-limit="5"
+             yasimdragfactor="30"
+             yasimliftfactor="140">
+             <control-input control="ROTORGEARENGINEON" axis="/controls/rotor/handstart"/>
+             <control-input control="ROTORBRAKE"        axis="/controls/rotor/brake" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
+  </rotorgear>
+
+  <!-- a fixed pitch propeller ommiting the  max-rpm, min-rpm, fine-stop and coarse-stop, the pitch is set by cruise speed and power parameters. -->
+  <propeller x="0.16150" y="0" z="-0.01455"
+             mass="0.05"
+             moment="0.0006"
+             radius="0.09"
+             cruise-speed="26"
+             cruise-rpm="7000"
+             cruise-power="0.1"
+             cruise-alt="2000"
+             takeoff-power="0.2"
+             takeoff-rpm="9200"
+             contra="1">
+             <actionpt x="0.195" y="0" z="-0.013"/>
+             <electric-engine Kv="750"
+                              voltage="12"
+                              Rm="0.02" >
+                              <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+             </electric-engine>
+  </propeller>
+
+  <!-- main fuselage -->
+  <fuselage ax=" 0.180" ay=" 0.000" az="-0.020" bx=" 0.144" by=" 0.000" bz="-0.020" width="0.068" taper="0" midpoint="1"/>
+  <fuselage ax=" 0.144" ay=" 0.000" az="-0.020" bx="-0.125" by=" 0.000" bz="-0.020" width="0.068" taper="1" midpoint="1"/>
+  <!-- main tube -->
+  <fuselage ax=" 0.072" ay=" 0.000" az="-0.056" bx="-0.427" by=" 0.000" bz="-0.056" width="0.010" taper="1" midpoint="1"/>
+
+  <hstab x="-0.446" y="0" z="-0.074"
+         chord="0.125"
+         length="0.16"
+         taper="1"
+         sweep="10">
+         <stall aoa="14" width="4" peak="1.5"/>
+  </hstab>
+
+  <vstab x="-0.496" y="0" z="-0.075"
+         chord="0.175"
+         length="0.17"
+         taper="1"
+         sweep="4">
+         <stall   aoa="16" width="1"   peak="1.5"/>
+         <flap0 start="0.1"  end="0.9" lift="1.2" drag="0.8"/>
+
+         <control-input  control="FLAP0" axis="/controls/flight/rudder"      invert="true"/>
+         <control-input  control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+  </vstab>
+
+  <!-- two front gears -->
+  <gear x="0.127" y="0.130" z="-0.140"
+        compression="0.04"
+        spring="3.5"
+        damp="0.75"
+        sfric="0.5"
+        dfric="0.4"
+        initial-load="0.8"
+        stiction="1">
+        <control-input control="BRAKE" axis="/controls/gear/brake-left"   split="true"/>
+        <control-input control="BRAKE" axis="/controls/gear/brake-parking" split="true"/>
+  </gear>
+
+  <gear x="0.127" y="-0.130" z="-0.140"
+        compression="0.04"
+        spring="3.5"
+        damp="0.75"
+        sfric="0.5"
+        dfric="0.4"
+        initial-load="0.8"
+        stiction="1">
+        <control-input control="BRAKE" axis="/controls/gear/brake-right"    split="true"/>
+        <control-input control="BRAKE" axis="/controls/gear/brake-parking" split="true"/>
+  </gear>
+
+  <!-- rear gear -->
+  <gear x="-0.558" y="0" z="-0.103"
+        compression="0.02"
+        spring="3.5"
+        damp="0.75"
+        sfric="0.8"
+        dfric="0.6"
+        stiction="1">
+        <control-input control="STEER" axis="/controls/flight/rudder"      src0="-1.0" src1="1.0" dst0="-0.3" dst1="0.3" square="true"/>
+        <control-input control="BRAKE" axis="/controls/gear/brake-right"   split="true"/>
+        <control-input control="BRAKE" axis="/controls/gear/brake-parking" split="true"/>
+  </gear>
+
+  <!-- body balast
+  <ballast x=" 0.000" y=" 0.000" z="-0.049" mass-kg="0.7"/> -->
+
+  <!-- motor balast
+  <ballast x=" 0.163" y=" 0.000" z="-0.016" mass-kg="0.18"/> -->
+
+  <!-- accumulator balast
+  <ballast x=" 0.105" y=" 0.000" z="-0.015" mass-kg="0.15"/> -->
+
+  <!-- tail balast
+  <ballast x="-0.430" y=" 0.000" z="-0.057" mass-kg="0.13"/> -->
+
+  <!-- Other -->
+  <ballast x=" 0.000" y=" 0.400" z="-0.049" mass-kg="0.13"/>
+  <ballast x=" 0.000" y="-0.400" z="-0.049" mass-kg="0.13"/>
+
+</airplane>

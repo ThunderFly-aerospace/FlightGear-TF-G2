@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <replay-config type="int">0</replay-config>
+
+  <config        n="0" include="/Aircraft/Generic/flightrecorder/generic-piston-propeller-1.xml">
+    <name        type="string">My Aircraft's Flight Recorder</name>
+    <signal>
+      <type>int</type>
+      <property  type="string">/rotors/main/rpm</property>
+    </signal>
+
+    <signal>
+      <type>double</type>
+      <property  type="string">/rotors/main/tilt/roll-deg</property>
+    </signal>
+
+    <signal>
+      <type>double</type>
+      <property  type="string">/rotors/main/tilt/pitch-deg</property>
+    </signal>
+  </config>
+
+</PropertyList>

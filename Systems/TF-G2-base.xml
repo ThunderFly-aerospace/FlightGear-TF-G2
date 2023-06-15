@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="views.xml">
+
+    <fuel-fraction>1</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/TF-G2bis/splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path>Aircraft/TF-G2bis/Sounds/sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/TF-G2bis/Models/TF-G2.xml</path>
+      <livery>
+        <file           type="string"></file>
+      </livery>
+      <TF-G2>
+        <rotor-step-deg type="float">-1</rotor-step-deg>
+      </TF-G2>
+    </model>
+
+    <current-view>
+      <view-number      type="int">5</view-number>
+    </current-view>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int    n="0"  type="int"> 0</int>
+        <int    n="1"  type="int"> 0</int>
+        <int    n="2"  type="int"> 0</int>
+        <int    n="3"  type="int"> 0</int>
+        <int    n="4"  type="int"> 0</int>
+        <int    n="5"  type="int"> 0</int>
+        <int    n="6"  type="bool">1</int>
+        <int    n="7"  type="int"> 0</int>
+        <float  n="0"  alias="/position/altitude-agl-ft">0</float>
+        <!-- For Bombable -->
+        <int    n="10" type="int" alias="controls/armament/trigger">0</int>
+        <string n="9"  type="string" />
+      </generic>
+    </multiplay>
+
+    <hud include="hud.xml"/>
+
+    <help include="help.xml"/>
+
+    <menubar include="../Dialogs/TF-G2-menu.xml"/>
+
+  </sim>
+
+  <controls include="controls.xml"/>
+
+  <input include="TF-G2-keyboard.xml"/>
+
+  <flight-recorder include="flight-recorder.xml"/>
+
+  <rotors include="rotors.xml"/>
+
+  <nasal>
+    <TF-G2>
+      <file>Aircraft/TF-G2bis/Nasal/liveries.nas</file>
+      <file>Aircraft/TF-G2bis/Nasal/autogyro.nas</file>
+      <file>Aircraft/TF-G2bis/Nasal/convert.nas</file>
+      <file>Aircraft/TF-G2bis/Nasal/Electrical.nas</file>
+    </TF-G2>
+  </nasal>
+
+</PropertyList>
